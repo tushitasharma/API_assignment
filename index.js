@@ -28,6 +28,16 @@ const Book = mongoose.model('Book', {
 
 app.use(bodyParser.json());
 
+// Endpoint 1: Retrieve All Books
+app.get('/api/books', async (req, res) => {
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
