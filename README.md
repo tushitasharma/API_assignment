@@ -119,3 +119,9 @@ To seed the database with mock data, run:
 ```bash
 node seed.js
 ```
+
+## Screenshots
+<img width="1440" alt="Screenshot 2023-12-07 at 1 06 52 AM" src="https://github.com/tushitasharma/API_assignment/assets/98650971/c23be058-bd4c-4af0-87d0-4eab5654b651">
+<img width="1440" alt="Screenshot 2023-12-07 at 1 04 56 AM" src="https://github.com/tushitasharma/API_assignment/assets/98650971/4dfd7428-c109-444e-9660-dcfd5690d61e">
+<img width="1440" alt="Screenshot 2023-12-07 at 1 04 31 AM" src="https://github.com/tushitasharma/API_assignment/assets/98650971/c33bc281-b890-4a70-af1f-52ab18e08d6e">
+
