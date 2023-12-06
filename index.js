@@ -38,6 +38,24 @@ app.get('/api/books', async (req, res) => {
   }
 });
 
+// Endpoint 2: Add a New Book
+app.post('/api/books', async (req, res) => {
+  const { title, author, genre } = req.body;
+
+  try {
+    const isBookExisting = await Book.findOne({ title });
+    if (isBookExisting) {
+      return res.status(400).json({ error: 'Book already exists' });
+    }
+
+    const newBook = new Book({ title, author, genre });
+    await newBook.save();
+    res.status(201).json(newBook);
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
